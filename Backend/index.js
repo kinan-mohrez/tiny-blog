@@ -14,7 +14,7 @@ app.use(express.json());
 app.use('/images', express.static(path.join(__dirname, '/images')));
 
 mongoose
-	.connect(process.env.MONGO_URL, {
+	.connect('mongodb://localhost/simpleBlog', {
 		user: process.env.MONGO_USER,
 		pass: process.env.MONGO_PASS,
 	})
